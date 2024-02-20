@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiEditorTest.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Border Stroke="LightGray">
+                <Editor  HeightRequest="100"
+                         Text="Line 1&#xa;Line 2&#xa;Line 3&#xa;Line 4&#xa;Line 5&#xa;Line 6&#xa;Line 7&#xa;" />
+            </Border>
+
+            <Editor  HeightRequest="100"
+                    Text="Line 1&#xa;Line 2&#xa;Line 3&#xa;Line 4&#xa;Line 5&#xa;Line 6&#xa;Line 7&#xa;" />
+
+            <Frame BorderColor="LightGray" Padding="0">
+                <Editor  HeightRequest="100"
+                         Text="Line 1&#xa;Line 2&#xa;Line 3&#xa;Line 4&#xa;Line 5&#xa;Line 6&#xa;Line 7&#xa;" />
+            </Frame>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
